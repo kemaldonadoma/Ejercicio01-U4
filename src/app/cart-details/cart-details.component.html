@@ -1,0 +1,12 @@
+<h2>Productos</h2>
+<p>
+     <a [routerLink]="[ '/shipping' ]">Shipping Prices</a>
+</p>
+<div *ngFor="let prod of items; index as id">
+    <p>{{prod.name}}</p>
+    <p>{{prod.price}}</p>
+    <p *ngIf="prod.description">
+        Descripcion: {{prod.description}}
+    </p>
+<hr>
+</div>
